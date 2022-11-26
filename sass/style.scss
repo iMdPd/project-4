@@ -5,6 +5,7 @@ $paragraph-font: "Anonymous Pro", monospace;
 $logo-color: #f29540;
 $text-color: #000000;
 $text-color2: #ffffff;
+$bg-color: #ecedef;
 
 /* GLOBAL */
 *,
@@ -120,11 +121,22 @@ body {
   }
   h2,
   h3 {
-    font-family: $header-font;
     margin: 0;
+    font-family: $header-font;
   }
   p {
     font-family: $paragraph-font;
-    margin: 0;
   }
+}
+
+.portfolio {
+  background: $bg-color;
+}
+
+/* OUR PORTFOLIO */
+
+.picture-box img {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
 }
