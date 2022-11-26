@@ -1,4 +1,10 @@
 /* --- VARIABLES --- */
+$header-font: "Roboto", sans-serif;
+$paragraph-font: "Anonymous Pro", monospace;
+
+$logo-color: #f29540;
+$text-color: #000000;
+$text-color2: #ffffff;
 
 /* GLOBAL */
 *,
@@ -12,6 +18,19 @@ body {
   font-size: 16px;
   line-height: 1.4;
   text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $logo-color;
+  text-decoration: none;
+  color: $text-color;
+  position: absolute;
+  top: 175%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* NAVIGATION */
@@ -36,6 +55,12 @@ body {
   a {
     text-decoration: none;
     text-transform: uppercase;
+    font-family: $paragraph-font;
+    color: $text-color;
+  }
+  .logotype {
+    font-size: 24px;
+    color: $logo-color;
   }
 }
 
@@ -55,8 +80,25 @@ body {
 
 .splash-inner {
   position: absolute;
-  width: 100%;
+  width: auto;
+  font-family: $header-font;
+  color: $text-color2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.splash-inner:after {
+  content: "";
+  background-color: $text-color;
+  border-radius: 10px;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.85;
+  z-index: -1;
+  margin: -30px -30px;
 }
