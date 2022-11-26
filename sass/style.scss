@@ -41,7 +41,7 @@ body {
   top: 0;
   width: 100%;
   overflow: hidden;
-  background: transparent;
+  background: $logo-color;
   z-index: 1;
   ul {
     padding: 0;
@@ -59,12 +59,8 @@ body {
     font-family: $paragraph-font;
     color: $text-color;
   }
-  a:hover {
-    color: $logo-color;
-  }
   .logotype {
     font-size: 24px;
-    color: $logo-color;
   }
 }
 
@@ -139,4 +135,48 @@ body {
   max-width: 300px;
   max-height: 300px;
   object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f29540;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+  }
+  li {
+    display: inline-block;
+    padding-left: 10px;
+    transition: all 2s;
+  }
+  li:hover {
+    transform: scale(1.2);
+  }
+
+  .logotype {
+    font-size: 24px;
+    color: $text-color;
+  }
+  a {
+    text-decoration: none;
+    font-family: $paragraph-font;
+    text-transform: uppercase;
+  }
+}
+
+.social {
+  font-size: 0;
+  i {
+    font-size: 24px;
+    color: $text-color;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: 0;
 }
