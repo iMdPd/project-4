@@ -58,6 +58,9 @@ body {
     font-family: $paragraph-font;
     color: $text-color;
   }
+  a:hover {
+    color: $logo-color;
+  }
   .logotype {
     font-size: 24px;
     color: $logo-color;
@@ -101,4 +104,27 @@ body {
   opacity: 0.85;
   z-index: -1;
   margin: -30px -30px;
+}
+
+/* SERVICE */
+
+.services {
+  i {
+    color: $logo-color;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 50%;
+    border: 2px solid $logo-color;
+  }
+  h2,
+  h3 {
+    font-family: $header-font;
+    margin: 0;
+  }
+  p {
+    font-family: $paragraph-font;
+    margin: 0;
+  }
 }
