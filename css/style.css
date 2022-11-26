@@ -10,9 +10,18 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* NAVIGATION */
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  z-index: 1;
+}
 .navigation ul {
   padding: 0;
   margin: 0;
@@ -20,14 +29,34 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .navigation li {
   display: inline-block;
 }
-
-ul a {
+.navigation a {
   text-decoration: none;
   text-transform: uppercase;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxzQkFBQTtBQUVBLFdBQUE7QUFDQTs7O0VBR0Usc0JBQUE7QUNBRjs7QURHQTtFQUNFLFNBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7QUNBRjs7QURHQSxlQUFBO0FBRUE7RUFDRSxVQUFBO0VBQ0EsU0FBQTtFQUNBLHFCQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0FDREY7O0FESUE7RUFDRSxxQkFBQTtBQ0RGOztBRElBO0VBQ0UscUJBQUE7RUFDQSx5QkFBQTtBQ0RGIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
+/* HEADER */
+.splash {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/dissasamble-camera.jpg");
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxzQkFBQTtBQUVBLFdBQUE7QUFDQTs7O0VBR0Usc0JBQUE7QUNBRjs7QURHQTtFQUNFLFNBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtBQ0FGOztBREdBLGVBQUE7QUFFQTtFQUNFLGVBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsdUJBQUE7RUFDQSxVQUFBO0FDREY7QURFRTtFQUNFLFVBQUE7RUFDQSxTQUFBO0VBQ0EscUJBQUE7RUFDQSxhQUFBO0VBQ0EsOEJBQUE7QUNBSjtBREVFO0VBQ0UscUJBQUE7QUNBSjtBREVFO0VBQ0UscUJBQUE7RUFDQSx5QkFBQTtBQ0FKOztBRElBLFdBQUE7QUFFQTtFQUNFLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLHVEQUFBO0VBQ0Esc0JBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0FDRkY7O0FES0E7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUNBLGdDQUFBO0FDRkYiLCJmaWxlIjoic3R5bGUuY3NzIn0= */

@@ -11,23 +11,52 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* NAVIGATION */
 
-.navigation ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  z-index: 1;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+/* HEADER */
+
+.splash {
+  position: relative;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/dissasamble-camera.jpg");
+  background-size: cover;
+  object-fit: cover;
 }
 
-.navigation li {
-  display: inline-block;
-}
-
-ul a {
-  text-decoration: none;
-  text-transform: uppercase;
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
