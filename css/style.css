@@ -15,15 +15,12 @@ body {
 
 .btn {
   cursor: pointer;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
   background-color: #f29540;
   text-decoration: none;
   color: #000000;
-  position: absolute;
-  top: 175%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
 }
 
 /* NAVIGATION */
@@ -42,11 +39,12 @@ body {
 }
 .navigation li {
   display: inline-block;
+  padding-right: 10px;
 }
 .navigation a {
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Quattrocento", serif;
   color: #000000;
   text-align: end;
 }
@@ -64,14 +62,13 @@ body {
   justify-content: center;
   background-image: url("/images/dissasamble-camera.jpg");
   background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .splash-inner {
   position: absolute;
   width: auto;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #ffffff;
   top: 50%;
   left: 50%;
@@ -93,6 +90,54 @@ body {
   margin: -30px -30px;
 }
 
+.scroll-container {
+  width: 30px;
+  height: 60px;
+  border: 3px solid #000000;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translate(50%, 0%);
+  animation: hideAnimation 0s ease-in 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+  }
+}
+.scroller {
+  width: 16px;
+  border-radius: 8px;
+  background-color: #000000;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 34px;
+  animation: scroller 1500ms ease-out infinite;
+}
+
+@keyframes scroller {
+  0% {
+    bottom: 34px;
+  }
+  5% {
+    top: 4px;
+  }
+  32% {
+    bottom: 4px;
+  }
+  66% {
+    top: 34px;
+    bottom: 4px;
+  }
+  100% {
+    top: 4px;
+    bottom: 34px;
+  }
+}
 /* SERVICE */
 .services i {
   color: #f29540;
@@ -103,24 +148,33 @@ body {
   border-radius: 50%;
   border: 2px solid #f29540;
 }
-.services h2,
+.services h2 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
 .services h3 {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .services p {
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Quattrocento", serif;
+  font-style: italic;
 }
 
 .portfolio {
   background: #ecedef;
 }
 .portfolio h2 {
+  letter-spacing: 1px;
+  font-size: 30px;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .portfolio p {
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Quattrocento", serif;
+  font-style: italic;
 }
 
 /* OUR PORTFOLIO */
@@ -131,8 +185,7 @@ body {
 .picture-box img {
   width: 100%;
   height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .picture-description {
@@ -141,6 +194,7 @@ body {
 }
 .picture-description h3 {
   margin: 0;
+  font-family: "Oswald", sans-serif;
 }
 .picture-description p {
   font-size: 12px;
@@ -179,7 +233,60 @@ body {
 }
 .page-footer i:hover {
   transform: scale(1.1);
-  color: #ecedef;
+  color: #ffffff;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxzQkFBQTtBQVNBLFdBQUE7QUFDQTs7O0VBR0Usc0JBQUE7QUNQRjs7QURVQTtFQUNFLFNBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtBQ1BGOztBRFVBO0VBQ0UsZUFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHlCQXZCVztFQXdCWCxxQkFBQTtFQUNBLGNBeEJXO0VBeUJYLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFNBQUE7RUFDQSxnQ0FBQTtBQ1BGOztBRFVBLGVBQUE7QUFFQTtFQUNFLGVBQUE7RUFDQSxXQUFBO0VBQ0EsbUJBckNXO0VBc0NYLFVBQUE7QUNSRjtBRFNFO0VBQ0UsVUFBQTtFQUNBLFNBQUE7RUFDQSxxQkFBQTtFQUNBLGFBQUE7RUFDQSw4QkFBQTtBQ1BKO0FEU0U7RUFDRSxxQkFBQTtBQ1BKO0FEU0U7RUFDRSxxQkFBQTtFQUNBLHlCQUFBO0VBQ0EsdUNBdERhO0VBdURiLGNBcERTO0VBcURULGVBQUE7QUNQSjtBRFNFO0VBQ0UsZUFBQTtBQ1BKOztBRFdBLFdBQUE7QUFFQTtFQUNFLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLHVEQUFBO0VBQ0Esc0JBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0FDVEY7O0FEWUE7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxpQ0FqRlk7RUFrRlosY0E3RVk7RUE4RVosUUFBQTtFQUNBLFNBQUE7RUFDQSxnQ0FBQTtBQ1RGOztBRFlBO0VBQ0UsV0FBQTtFQUNBLHlCQXRGVztFQXVGWCxtQkFBQTtFQUNBLHNCQUFBO0VBQ0Esa0JBQUE7RUFDQSxRQUFBO0VBQ0EsVUFBQTtFQUNBLFdBQUE7RUFDQSxTQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSxtQkFBQTtBQ1RGOztBRFlBLFlBQUE7QUFHRTtFQUNFLGNBeEdTO0VBeUdULGVBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtBQ1hKO0FEYUU7O0VBRUUsU0FBQTtFQUNBLGlDQXRIVTtBQzJHZDtBRGFFO0VBQ0UsdUNBeEhhO0FDNkdqQjs7QURlQTtFQUNFLG1CQXhIUztBQzRHWDtBRGFFO0VBQ0UsU0FBQTtFQUNBLGlDQWpJVTtBQ3NIZDtBRGFFO0VBQ0UsdUNBbklhO0FDd0hqQjs7QURlQSxrQkFBQTtBQUNBO0VBQ0UsYUFBQTtBQ1pGOztBRGVBO0VBQ0UsV0FBQTtFQUNBLGVBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0FDWkY7O0FEZUE7RUFDRSxlQUFBO0VBQ0EseUJBQUE7QUNaRjtBRGFFO0VBQ0UsU0FBQTtBQ1hKO0FEYUU7RUFDRSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSxTQUFBO0FDWEo7O0FEZUEsV0FBQTtBQUNBO0VBQ0UseUJBL0pXO0VBZ0tYLHVCQUFBO0VBQ0Esa0JBQUE7QUNaRjtBRGFFO0VBQ0UsVUFBQTtFQUNBLFNBQUE7RUFDQSxxQkFBQTtBQ1hKO0FEYUU7RUFDRSxxQkFBQTtFQUNBLGtCQUFBO0FDWEo7QURhRTtFQUNFLHFCQUFBO0VBQ0EsWUFBQTtBQ1hKO0FEYUU7RUFDRSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBcExTO0VBcUxULG9CQUFBO0VBQ0EsY0F2TFM7QUM0S2I7QURhRTtFQUNFLHFCQUFBO0VBQ0EsY0FBQTtBQ1hKIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
+@media (max-width: 768px) {
+  .nav-text {
+    display: none;
+  }
+  .dropbtn {
+    background-color: #000000;
+    color: #f29540;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    border: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: #ffffff;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px #000000;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: #000000;
+    padding: 4px 16px;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #ffffff;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: #f29540;
+    color: #000000;
+  }
+}
+@media (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+  .dropbtn {
+    display: none;
+  }
+  .dropdown-content {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
