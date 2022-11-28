@@ -5,37 +5,190 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 4</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Quattrocento&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="vendor/bootstrap-grid.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <nav class="py-6">
+    <nav class="navigation py-3 d-flex justify-content-around">
       <div class="container">
-        <div class="row d-flex">
-          <div class="col-4 flex-fill">
+        <div class="row">
+          <div class="col-10 col-md-4 d-flex justify-content-start">
             <ul>
-              <li><a href="#">Golden</a></li>
+              <li><a class="logotype" href="#">Propper Copper</a></li>
             </ul>
           </div>
-          <div class="col-6 flex-fill d-flex justify-content-around">
+          <div
+            class="col-2 col-md-8 col-lg-8 d-grid align-items-center d-flex justify-content-end"
+          >
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a class="nav-text" href="#">Home</a></li>
+              <li><a class="nav-text" href="#">Services</a></li>
+              <li><a class="nav-text" href="#">Portfolio</a></li>
+              <li><a class="nav-text" href="#">About</a></li>
+              <li><a class="nav-text" href="#">Contact</a></li>
+              <li class="dropdown">
+                <button class="dropbtn">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a class="nav-text" href="#">Home</a>
+                  <a class="nav-text" href="#">Services</a>
+                  <a class="nav-text" href="#">Portfolio</a>
+                  <a class="nav-text" href="#">About</a>
+                  <a class="nav-text" href="#">Contact</a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
 
-    <header></header>
+    <header class="splash">
+      <div class="container">
+        <div class="splash-inner">
+          <h2>WELCOME TO OUR STUDIO!</h2>
+          <h1>IT'S NICE TO MEET YOU</h1>
+          <a href="#" class="btn">TELL ME MORE</a>
+        </div>
+        <div class="scroll-container">
+          <div class="scroller"></div>
+        </div>
+      </div>
+    </header>
 
-    <section class="services"></section>
+    <section class="services">
+      <div class="container py-5">
+        <div class="py-4">
+          <h2>SERVICES</h2>
+          <p class="my-0">Aliquam condimentum rhoncus maximus.</p>
+        </div>
+        <div class="row d-flex justify-content-around py-4">
+          <div class="col-10 col-md-4">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <h3>E-commerce</h3>
+            <p>
+              Nullam mattis ligula in lectus maximus semper. Duis dictum enim
+              nec libero vestibulum ultrices. Pellentesque egestas enim in augue
+              rutrum venenatis.
+            </p>
+          </div>
+          <div class="col-10 col-md-4">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Maintenance</h3>
+            <p>
+              Nullam mattis ligula in lectus maximus semper. Duis dictum enim
+              nec libero vestibulum ultrices. Pellentesque egestas enim in augue
+              rutrum venenatis.
+            </p>
+          </div>
+          <div class="col-10 col-md-4">
+            <i class="fa-solid fa-earth-americas"></i>
+            <h3>Worldwide</h3>
+            <p>
+              Nullam mattis ligula in lectus maximus semper. Duis dictum enim
+              nec libero vestibulum ultrices. Pellentesque egestas enim in augue
+              rutrum venenatis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="portfolio"></section>
+    <section class="portfolio">
+      <div class="container py-5">
+        <div class="py-4">
+          <h2>OUR PORTFOLIO</h2>
+          <p class="my-0">Aliquam condimentum rhoncus maximus.</p>
+        </div>
+        <div class="row d-flex justify-content-around py-4">
+          <div class="col-10 col-md-6 col-lg-4 pb-4">
+            <div class="picture-box">
+              <img src="/images/camera1.jpg" alt="camera" />
+            </div>
+            <div class="picture-description">
+              <h3>Nunc sit.</h3>
+              <p>Mauris felis ante.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 col-lg-4 pb-4">
+            <div class="picture-box">
+              <img src="/images/camera2.jpg" alt="camera" />
+            </div>
+            <div class="picture-description">
+              <h3>Nam sodales.</h3>
+              <p>Mauris felis ante.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 col-lg-4 pb-4">
+            <div class="picture-box">
+              <img src="/images/camera3.jpg" alt="camera" />
+            </div>
+            <div class="picture-description">
+              <h3>Praesent risus.</h3>
+              <p>Mauris felis ante.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 col-lg-4 pb-4">
+            <div class="picture-box">
+              <img src="/images/camera4.jpg" alt="camera" />
+            </div>
+            <div class="picture-description">
+              <h3>Suspendisse quis.</h3>
+              <p>Mauris felis ante.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 col-lg-4 pb-4">
+            <div class="picture-box">
+              <img src="/images/camera5.jpg" alt="camera" />
+            </div>
+            <div class="picture-description">
+              <h3>Aenean tempus.</h3>
+              <p>Mauris felis ante.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 col-lg-4 pb-4">
+            <div class="picture-box">
+              <img src="/images/camera6.jpg" alt="camera" />
+            </div>
+            <div class="picture-description">
+              <h3>Curabitur tristique.</h3>
+              <p>Mauris felis ante.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer></footer>
+    <footer class="page-footer">
+      <ul>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i>TWITTER</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i>FACEBOOK</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i>INSTAGRAM</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i>GOOGLE+</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-google-plus-g"></i>GOOGLE+</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
